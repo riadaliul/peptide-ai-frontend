@@ -1,0 +1,140 @@
+{
+    "aa_list": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "K",
+        "L",
+        "M",
+        "N",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "V",
+        "W",
+        "Y"
+    ],
+    "thresholds": {
+        "improve": 0.20,
+        "degrade": -0.20,
+        "neutral_abs": 0.10,
+        "high_sensitive_degrade": 14,
+        "mod_sensitive_degrade": 10,
+        "high_design_improve": 10,
+        "mod_design_improve": 5,
+        "group_beneficial_min": 0.25,
+        "group_harmful_max": -0.25,
+        "group_margin": 0.05,
+        "top_opt_site_delta": 0.80,
+        "top_opt_site_max_num": 3,
+        "top_k_mutations": 10
+    },
+    "aa_groups": {
+        "hydrophobic": [
+            "A",
+            "V",
+            "L",
+            "I",
+            "M"
+        ],
+        "aromatic": [
+            "F",
+            "W",
+            "Y"
+        ],
+        "positive": [
+            "K",
+            "R",
+            "H"
+        ],
+        "negative": [
+            "D",
+            "E"
+        ],
+        "polar": [
+            "S",
+            "T",
+            "N",
+            "Q",
+            "C"
+        ],
+        "special": [
+            "G",
+            "P"
+        ]
+    },
+    "position_class_rules": [
+        {
+            "id": "highly_sensitive",
+            "label": "Highly sensitive / intolerant",
+            "conditions": {
+                "num_degrade_gte": 14,
+                "num_improve_lte": 2
+            }
+        },
+        {
+            "id": "moderately_sensitive",
+            "label": "Moderately sensitive",
+            "conditions": {
+                "num_degrade_gte": 10
+            }
+        },
+        {
+            "id": "highly_designable",
+            "label": "Highly designable hotspot",
+            "conditions": {
+                "num_improve_gte": 10,
+                "num_degrade_lte": 3
+            }
+        },
+        {
+            "id": "moderately_designable",
+            "label": "Moderately designable",
+            "conditions": {
+                "num_improve_gte": 5
+            }
+        },
+        {
+            "id": "neutral",
+            "label": "Neutral / tolerant",
+            "conditions": {}
+        }
+    ],
+    "beneficial_explanations": {
+        "hydrophobic": "Hydrophobic enrichment improves function at this site.",
+        "positive": "Positive charge enhances function; this may be an interaction or binding site.",
+        "polar": "Surface polarity at this site is beneficial.",
+        "aromatic": "Aromatic residues enhance function; π–π or stacking interactions may contribute.",
+        "negative": "Acidic residues are beneficial at this site, suggesting a role in specific electrostatics.",
+        "special": "Glycine/proline-like flexibility appears beneficial at this site."
+    },
+    "harmful_explanations": {
+        "hydrophobic": "Hydrophobic residues are unfavorable here, suggesting a preference for solvent exposure or polar chemistry.",
+        "positive": "Positive charge is poorly tolerated at this site.",
+        "negative": "Acidic substitutions are strongly detrimental at this position.",
+        "aromatic": "Aromatic residues tend to disrupt function at this site.",
+        "special": "Helix-breaking residues (G, P) destabilize function at this position.",
+        "polar": "Excess polarity is unfavorable here; the site prefers more hydrophobic chemistry."
+    },
+    "templates": {
+        "position_header": "Position {{pos1}} ({{wt}}): {{class_label}}",
+        "position_basic_stats": "Most beneficial mutation: {{best_AA}} (ΔBFI = {{best_score}}); most harmful: {{worst_AA}} (ΔBFI = {{worst_score}}). Improvements: {{num_improve}}, Degradations: {{num_degrade}}, Neutral: {{num_neutral}}.",
+        "conserved_charged_override": "Mutations at this charged residue are almost uniformly detrimental, indicating a highly conserved electrostatic site that is both structurally and functionally critical.",
+        "excellent_target": "This site is among the strongest optimization targets in the mutational landscape.",
+        "global_summary_header": "ΔBFI Mutational Landscape Summary",
+        "global_structural_core": "Structurally conserved positions (highly sensitive): {{core_positions}}.",
+        "global_sensitive": "Sensitive positions (highly or moderately sensitive): {{sensitive_positions}}.",
+        "global_designable": "Designable positions (highly or moderately designable): {{designable_positions}}.",
+        "global_group_preferences": "Group-level residue preferences (mean ΔBFI): hydrophobic={{hydrophobic_mean}}, aromatic={{aromatic_mean}}, positive={{positive_mean}}, negative={{negative_mean}}, polar={{polar_mean}}, special={{special_mean}}.",
+        "top_beneficial_header": "Top {{top_k}} beneficial mutations:",
+        "top_harmful_header": "Top {{top_k}} most detrimental mutations:",
+        "mutation_line": "{{rank}}. {{aa}}{{pos1}} → ΔBFI {{delta}}"
+    }
+}
