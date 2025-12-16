@@ -1,0 +1,241 @@
+/* Design Tokens - Peptide AI Design System */
+
+:root {
+    /* ===== PRIMARY PALETTE ===== */
+    --color-primary-50: #EEF2FF;
+    --color-primary-100: #E0E7FF;
+    --color-primary-200: #C7D2FE;
+    --color-primary-300: #A5B4FC;
+    --color-primary-400: #818CF8;
+    --color-primary-500: #365FCF;
+    --color-primary-600: #70A1F7;
+    --color-primary-700: #4F46E5;
+    --color-primary-800: #3730A3;
+    --color-primary-900: #1E3A8A;
+
+    /* ===== SECONDARY ACCENTS ===== */
+    --color-lavender: #9C8FE8;
+    --color-lavender-light: #B8ACF6;
+    --color-lavender-dark: #6B5FBF;
+
+    --color-mint: #7AE7C7;
+    --color-mint-light: #A8F5DD;
+    --color-mint-dark: #4ACAA3;
+
+    /* ===== SEMANTIC COLORS ===== */
+    --color-success: #10B981;
+    --color-success-light: #34D399;
+    --color-success-dark: #047857;
+
+    --color-warning: #F59E0B;
+    --color-warning-light: #FBBF24;
+    --color-warning-dark: #D97706;
+
+    --color-error: #EF4444;
+    --color-error-light: #F87171;
+    --color-error-dark: #DC2626;
+
+    --color-info: #3B82F6;
+    --color-info-light: #60A5FA;
+    --color-info-dark: #2563EB;
+
+    /* ===== NEUTRAL PALETTE ===== */
+    --color-white: #FFFFFF;
+    --color-gray-50: #F8FAFC;
+    --color-gray-100: #F1F5F9;
+    --color-gray-200: #E2E8F0;
+    --color-gray-300: #CBD5E1;
+    --color-gray-400: #94A3B8;
+    --color-gray-500: #64748B;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+    --color-gray-800: #1E293B;
+    --color-gray-900: #0F172A;
+    --color-black: #000000;
+
+    /* ===== GRADIENT BACKGROUNDS ===== */
+    --gradient-hero: linear-gradient(135deg, #EDEAFF 0%, #F5F3FF 50%, #FFEAF2 100%);
+    --gradient-primary: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+    --gradient-success: linear-gradient(135deg, var(--color-success) 0%, var(--color-mint) 100%);
+    --gradient-lavender: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-primary-400) 100%);
+
+    /* ===== SPACING (8px Grid System) ===== */
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    /* 4px */
+    --spacing-2: 0.5rem;
+    /* 8px */
+    --spacing-3: 0.75rem;
+    /* 12px */
+    --spacing-4: 1rem;
+    /* 16px */
+    --spacing-5: 1.25rem;
+    /* 20px */
+    --spacing-6: 1.5rem;
+    /* 24px */
+    --spacing-7: 1.75rem;
+    /* 28px */
+    --spacing-8: 2rem;
+    /* 32px */
+    --spacing-10: 2.5rem;
+    /* 40px */
+    --spacing-12: 3rem;
+    /* 48px */
+    --spacing-16: 4rem;
+    /* 64px */
+    --spacing-20: 5rem;
+    /* 80px */
+    --spacing-24: 6rem;
+    /* 96px */
+
+    /* ===== TYPOGRAPHY ===== */
+    --font-heading: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-body: 'Inter', 'SF Pro', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Courier New', monospace;
+
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 1.875rem;
+    /* 30px */
+    --font-size-4xl: 2.25rem;
+    /* 36px */
+    --font-size-5xl: 3rem;
+    /* 48px */
+    --font-size-6xl: 3.75rem;
+    /* 60px */
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* ===== SHADOWS & ELEVATION ===== */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+    /* Colored shadows for emphasis */
+    --shadow-primary: 0 10px 25px -5px rgba(54, 95, 207, 0.4);
+    --shadow-success: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+    --shadow-warning: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+    --shadow-error: 0 10px 25px -5px rgba(239, 68, 68, 0.4);
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-none: 0;
+    --radius-sm: 0.25rem;
+    /* 4px */
+    --radius-md: 0.5rem;
+    /* 8px */
+    --radius-lg: 0.75rem;
+    /* 12px */
+    --radius-xl: 1rem;
+    /* 16px */
+    --radius-2xl: 1.5rem;
+    /* 24px */
+    --radius-3xl: 2rem;
+    /* 32px */
+    --radius-full: 9999px;
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ===== Z-INDEX LAYERS ===== */
+    --z-base: 0;
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}
+
+/* ===== DARK MODE THEME ===== */
+[data-theme="dark"] {
+    /* Override neutrals for dark mode */
+    --color-gray-50: #0F172A;
+    --color-gray-100: #1E293B;
+    --color-gray-200: #334155;
+    --color-gray-300: #475569;
+    --color-gray-400: #64748B;
+    --color-gray-500: #94A3B8;
+    --color-gray-600: #CBD5E1;
+    --color-gray-700: #E2E8F0;
+    --color-gray-800: #F1F5F9;
+    --color-gray-900: #F8FAFC;
+
+    --gradient-hero: linear-gradient(135deg, #1E293B 0%, #334155 50%, #475569 100%);
+
+    /* Adjust shadows for dark mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-lavender {
+    background: var(--gradient-lavender);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .glass-effect {
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.shadow-premium {
+    box-shadow: var(--shadow-xl), var(--shadow-primary);
+}
+
+.transition-smooth {
+    transition: all var(--transition-base);
+}
+
+/* ===== AMINO ACID COLORS (for sequence visualization) ===== */
+:root {
+    --aa-hydrophobic: #F59E0B;
+    /* Amber - A, V, I, L, M, F, W, P */
+    --aa-polar: #3B82F6;
+    /* Blue - S, T, N, Q, C, Y */
+    --aa-acidic: #EF4444;
+    /* Red - D, E */
+    --aa-basic: #A855F7;
+    /* Purple - K, R, H */
+    --aa-glycine: #94A3B8;
+    /* Gray - G */
+}
